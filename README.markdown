@@ -39,3 +39,7 @@ test:
 4. Embiggen with the little magnifying glass
 5. Checkbox in the upper right marks a photo for delete (it will turn red).  Delete was not actually implemented, this is just a flag in the database.
 6. Infinite scroll done the right way.
+
+## Sample
+
+![](https://raw.githubusercontent.com/dapplebeforedawn/photoboard-os/master/doc/sample.png)
