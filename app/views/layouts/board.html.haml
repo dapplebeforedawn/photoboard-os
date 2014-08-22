@@ -1,0 +1,16 @@
+=render '/layouts/common'
+!!! 5
+%html.board(lang="en")
+  =yield :head
+
+  %body
+    = yield :nav
+
+    .container-fluid
+      = yield :flash
+
+      = yield
+    
+      = yield :footer
+
+    = javascript_include_tag "application"

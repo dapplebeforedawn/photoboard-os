@@ -1,0 +1,74 @@
+html.board{
+  body{
+    background: image_url("cork.jpg");
+  }
+
+  
+  [class*=' span'], [class^='span']{
+    text-align: center;
+  }
+
+  .accent{
+    font-family: 'Lobster', cursive;
+    text-shadow: -1px -1px #ccc;
+    color: #444;
+    font-size: 1.1em;
+  }
+
+  footer{
+    font-family: 'Lobster', cursive;
+    text-shadow: -1px -1px 1px #777;
+    color: #eee;
+    font-size: 1.1em;
+  }
+}
+
+.polaroid {
+  position: relative;
+  z-index: 2;
+  a, input[type='checkbox']{
+    position: absolute;
+    top: 3px;
+    z-index: 2;
+    &[rel='gallery']{
+      opacity: 0.3;
+      left: 3px;
+    }
+    &[href^='#show-comments']{
+      opacity: 0.5;
+      left: 3px;
+      top: 30px;
+    }
+    &[name='memory[marked_for_delete_at]']{
+      opacity: 0.3;
+      right: 3px;
+    }
+  }
+}
+
+[name='memory[marked_for_delete_at]']:checked ~ dd:after{
+  content: '';
+  width: 101%;
+  height: 101%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+}
+
+form[data-live-edit]{
+  input[type='text'], input[type='submit']{
+    display: none;
+  }
+}
+
+#fancybox-loading div {
+  width: 128px;
+  height: 113px;
+  background: url('loading-black.gif') center center no-repeat;
+}
+
+.memory{
+  position: relative;
+}

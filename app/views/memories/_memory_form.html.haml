@@ -1,0 +1,32 @@
+.memory
+  = form_for memory, html: {'data-live-edit' => true} do |f|
+    %dl.polaroid
+      = link_to memory.photo_url(:display), rel: 'gallery' do
+        %i.icon-zoom-in
+      = link_to "#show-comments-#{memory.id}"  do
+        %i.icon-pencil
+      = hidden_field :memory, :marked_for_delete_at, value: false
+      = f.check_box :marked_for_delete_at, {}, Time.now, false
+
+      -#%span.push-pin
+      %dd
+        = image_tag memory.photo_url(:thumb), exif: true
+      %dt 
+        %div.memory-title= memory.title
+        = f.text_field :title, class: 'memory-title'
+
+  = form_for Comment.new(memory_id: memory.id), html: {'data-live-edit' => true} do |f|
+    .comments-pad.behind
+      .old-comments
+        - memory.comments.each do |comment|
+          %div.user-tag= "-- #{name_only comment.user.email} --"
+          %p= comment.text
+
+        .this-comment
+          %div.user-tag= "-- #{name_only current_user.email} --"
+          %p
+
+      =f.hidden_field :memory_id
+      =f.text_area :text
+
+

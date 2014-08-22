@@ -1,0 +1,13 @@
+.infinite-invisible{
+  visibility: hidden;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.infinite-loading:after{
+  content: image_url('loading-black.gif');
+  text-align: center;
+  display: block;
+  opacity: 0.8;
+}

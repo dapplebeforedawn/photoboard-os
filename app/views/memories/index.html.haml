@@ -1,0 +1,15 @@
+%div.tape [ #{RawPhoto.size} unprocessed photos - #{link_to 'Logs', '/sidekiq', class: 'accent'} ]
+.infinite-container
+  .infinite-content
+    - @memories.each_slice(4) do |four_memories|
+      .row-fluid
+        - four_memories.each do |memory|
+          .span3
+            = render '/memories/memory_form', memory: memory 
+  -#%tr
+    -#%td= memory.photo
+    -#%td= link_to 'Show', memory
+    -#%td= link_to 'Edit', edit_memory_path(memory)
+    -#%td= link_to 'Destroy', memory, :method => :delete, :data => { :confirm => 'Are you sure?' }
+= paginate @memories 
+

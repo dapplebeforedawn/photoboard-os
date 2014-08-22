@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Photo:
+  = @memory.photo
+
+= link_to 'Edit', edit_memory_path(@memory)
+\|
+= link_to 'Back', memories_path

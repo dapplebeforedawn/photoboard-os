@@ -1,0 +1,9 @@
+development:
+  storage: fog
+  bucket: "photoboard-devel"
+production:
+  storage: fog
+  bucket: "photoboard-prod"
+test:
+  storage: file
+

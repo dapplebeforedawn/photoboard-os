@@ -1,0 +1,109 @@
+.comments-pad{
+  background: image_url('legal_pad.jpg');
+  background-size: 900px;
+  background-position: -90px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  font-family: monospace;
+  text-shadow: 1px 1px 1px #eee;
+  padding-left: 17px;
+  margin-top: -41px;
+  box-shadow: 2px 2px 8px #333;
+
+  -moz-transition:max-width 1s;
+  -webkit-transition:max-width 1s;
+  -o-transition:max-width 1s;
+  transition:max-width 1s;
+
+  &.behind{
+    position: absolute;
+    left: 26%;
+    bottom: -5px;
+    max-width: 138px;
+    max-height: 150px;
+    z-index: 0;
+    overflow: hidden;
+    margin-top: 0px;
+    padding-bottom: 8px;
+    padding-right: 4px;
+    border-bottom: 4px solid transparent;
+    box-sizing: border-box;
+  }
+
+  &.comments-invisible{
+    display: none;
+  }
+
+  .old-comments{
+    margin-left: 8px;
+
+    .user-tag{
+      font-size: small;
+      color: #888;
+      text-shadow: none;
+      margin-left: 30px;
+    }
+  }
+
+  form{
+    margin: 0;
+  }
+  textarea{
+    height: 100px;
+    background-color: transparent;
+    border: 1px solid #bbb;
+    max-width: 85%;
+  }
+
+}
+
+
+.comment-pull-left-0{
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.comment-pull-right-0{
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.comment-pull-left-05{
+  -webkit-transform: rotate(0.5deg);
+  -moz-transform: rotate(-0.5deg);
+  transform: rotate(-0.5deg);
+}
+
+.comment-pull-right-05{
+  -webkit-transform: rotate(-0.5deg);
+  -moz-transform: rotate(0.5deg);
+  transform: rotate(0.5deg);
+}
+
+.comment-pull-left-1{
+  -webkit-transform: rotate(1deg);
+  -moz-transform: rotate(-1deg);
+  transform: rotate(-1deg);
+}
+
+.comment-pull-right-1{
+  -webkit-transform: rotate(-1deg);
+  -moz-transform: rotate(1deg);
+  transform: rotate(1deg);
+}
+
+.comment-pull-left-15{
+  -webkit-transform: rotate(1.5deg);
+  -moz-transform: rotate(-1.5deg);
+  transform: rotate(-1.5deg);
+}
+
+.comment-pull-right-15{
+  -webkit-transform: rotate(-1.5deg);
+  -moz-transform: rotate(1.5deg);
+  transform: rotate(1.5deg);
+}
+
